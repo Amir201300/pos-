@@ -13,9 +13,10 @@ Route::prefix($basname)->middleware('api')->group(function () use ($basname) {
 
         Route::middleware('auth:api-Shop')->group(function () use ($basname) {
 
-            Route::prefix(config($basname . '.prefix.user'))->group(function () {
+            Route::prefix(config($basname . '.prefix.shop'))->group(function () {
 
-                Route::get('tets', 'LoginController@login')->name('shop.login');
+                Route::get('get_info', 'LoginController@get_info')->name('shop.get_info');
+                Route::post('edit_info', 'LoginController@edit_info')->name('shop.edit_info');
 
             });
         });

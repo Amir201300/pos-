@@ -13,13 +13,33 @@ class LoginController extends Controller
 {
 
 
-
+    /**
+     * @param ShopInterface $ShopInterface
+     * @param Request $request
+     * @return mixed
+     */
     public function login(ShopInterface $ShopInterface,Request $request)
     {
         return $ShopInterface->login($request);
     }
 
+    /**
+     * @param ShopInterface $ShopInterface
+     * @param Request $request
+     * @return mixed
+     */
+    public function get_info(ShopInterface $ShopInterface,Request $request)
+    {
+        return $ShopInterface->getInfo($request);
+    }
 
-
-
+    /**
+     * @param ShopInterface $ShopInterface
+     * @param Request $request
+     * @return mixed
+     */
+    public function edit_info(ShopInterface $ShopInterface,Request $request)
+    {
+        return $ShopInterface->edit_inf($request);
+    }
 }

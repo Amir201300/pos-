@@ -2,7 +2,6 @@
 
 return [
     'prefix'=>[
-        'user'=>'user',
+        'shop'=>'shop',
     ],
-    'basName'=>'Shop',
 ];
